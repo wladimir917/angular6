@@ -1,0 +1,20 @@
+<table>
+    <tr>
+      <td>Id</td>
+      <td>Name</td>
+      <td>Gender</td>
+    </tr>
+    <tr 
+      *ngFor="let user of users;
+        let i = index;
+        let evenRecord = even; 
+        let oddRecord = odd"
+      [ngClass]="{
+        odd: oddRecord,
+        even: evenRecord
+        }">
+      <td>{{ i + 1 }}</td>
+      <td>{{ user.name.first}} {{ user.name.last}}</td>
+      <td>{{ user.gender }}</td>
+    </tr>
+</table>
