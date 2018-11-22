@@ -9,14 +9,18 @@ import { HelloComponent } from './hello/hello.component';
 
 import { RecordsService } from './records.service';
 import { HomeComponent } from './home/home.component';
-import { DataComponent } from './data/data.component'
+import { DataComponent } from './data/data.component';
+import { LoginComponent } from './login/login.component';
+import { AdminComponent } from './admin/admin.component'
 
 @NgModule({
   declarations: [
     AppComponent,
     HelloComponent,
     HomeComponent,
-    DataComponent
+    DataComponent,
+    LoginComponent,
+    AdminComponent
   ],
   imports: [
     BrowserModule,
