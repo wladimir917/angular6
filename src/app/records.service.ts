@@ -1,10 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
-interface usersData {
-  results: any
-};
-
 @Injectable({
   providedIn: 'root'
 })
@@ -15,6 +11,6 @@ export class RecordsService {
    }
 
   getUsers(records) {
-    return this.http.get<usersData>('https://randomuser.me/api/?results='+ records);
+    return this.http.get('https://randomuser.me/api/?results='+ records);
   }
 }

@@ -1,6 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { RecordsService } from '../records.service';
 
+interface usersData {
+  results: any
+};
+
 
 @Component({
   selector: 'app-data',
@@ -14,7 +18,8 @@ export class DataComponent implements OnInit {
 
   ngOnInit() {
     this.myFirstService.getUsers(10)
-    .subscribe(data => {
+    .subscribe(response => {
+      const data = <usersData> response; 
       this.users = data.results;
     });
   }

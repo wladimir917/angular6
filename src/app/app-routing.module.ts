@@ -1,9 +1,12 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+
 import { HomeComponent } from './home/home.component';
 import { DataComponent } from './data/data.component';
 import { LoginComponent } from './login/login.component';
 import { AdminComponent } from './admin/admin.component';
+
+import { AuthGuard } from './auth.guard';
 
 const routes: Routes = [
   {
@@ -12,7 +15,8 @@ const routes: Routes = [
   },
   {
     path: 'admin',
-    component: AdminComponent
+    component: AdminComponent,
+    canActivate: [AuthGuard]
   },
   {
     path: 'data',
