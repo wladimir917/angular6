@@ -1,6 +1,9 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<div class="container-fluid">
-  <ul class="nav nav-pills justify-content-end">
+<nav class="navbar sticky-top navbar-expand-lg navbar-light" style="background-color: #eff5f5;">
+  <a class="navbar-brand" routerLink="">
+    <img src="assets/img/logo.svg" height="40" alt="Wladimir Fraga">
+  </a>
+  <ul class="nav justify-content-end">
     <li class="nav-item">
       <a class="nav-link " routerLink="" routerLinkActive="active">Home</a>
     </li>
@@ -14,5 +17,6 @@
       <a class="nav-link" (click)="logout()" routerLink="" *ngIf="auth.isLoggedIn">Logout</a>
     </li>
   </ul>
-  <router-outlet></router-outlet>
-</div>
+</nav>
+<router-outlet></router-outlet>
+
