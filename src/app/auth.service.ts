@@ -14,13 +14,17 @@ export class AuthService {
     this.loggedInStatus = logged
   };
 
+  logout() {
+    // localStorage.removeItem('access_token');
+    this.setLoggedIn(false);
+  }
+
   get isLoggedIn() {
     return this.loggedInStatus
   };
 
   getUserDetails(username, password) {
     //API call
-    console.log(username, password);
     return this.http.post('https://young-coast-73926.herokuapp.com/api/auth/login/', {
       username,
       password
