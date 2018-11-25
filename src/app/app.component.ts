@@ -27,7 +27,7 @@ function log(className) {
 })
 
 export class AppComponent {
-  title = 'intro2angular';
+  title = 'Angular 6 - Todo App';
   name = 'Name';
   text2 = 'text2';
   

@@ -1,8 +1,15 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<p>
-  <a routerLink="">Home</a>
-  <a routerLink="/login">Login</a>
-  <a routerLink="/data">Data</a>
-</p>
-
-<router-outlet></router-outlet>
+<div class="container-fluid">
+  <ul class="nav nav-pills justify-content-end">
+    <li class="nav-item">
+      <a class="nav-link" routerLink="">Home</a>
+    </li>
+    <li>
+      <a class="nav-link active" routerLink="/login">Login</a>
+    </li>
+    <li>
+      <a class="nav-link" routerLink="/data">Data</a>
+    </li>
+  </ul>
+  <router-outlet></router-outlet>
+</div>

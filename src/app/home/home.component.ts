@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.less']
 })
 export class HomeComponent implements OnInit {
-  title = 'intro2angular';
+  title = 'Angular6 - Todo App';
   name = 'Name';
   text2 = 'text2';
   
