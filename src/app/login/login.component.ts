@@ -29,7 +29,7 @@ export class LoginComponent implements OnInit {
           const response = <response>data;
           this.error = '';
           console.log("Result: ", response);
-          this.router.navigate(['admin']);
+          this.router.navigate(['data']);
           this.Auth.setLoggedIn(true);
         },
         err => {

@@ -8,7 +8,7 @@
       <a class="nav-link " routerLink="" routerLinkActive="active">Home</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" routerLink="data" routerLinkActive="active">Data</a>
+      <a class="nav-link" routerLink="data" routerLinkActive="active" *ngIf="auth.isLoggedIn">Data</a>
     </li>
     <li class="nav-item">
       <a class="nav-link" routerLink="login" routerLinkActive="active" *ngIf="!auth.isLoggedIn">Login</a>
