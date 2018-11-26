@@ -16,7 +16,7 @@ export class AppComponent {
   name = 'Name';
   text2 = 'text2';
   
-  constructor(private auth: AuthService, private router: Router) {
+  constructor(public auth: AuthService, private router: Router) {
   };
 
   ngOnInit() {
