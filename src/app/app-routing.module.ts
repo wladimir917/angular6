@@ -20,7 +20,8 @@ const routes: Routes = [
   },
   {
     path: 'data',
-    component: DataComponent
+    component: DataComponent,
+    canActivate: [AuthGuard]
   },
   {
     path: '',
