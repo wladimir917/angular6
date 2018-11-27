@@ -1,22 +1,27 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<nav class="navbar sticky-top navbar-expand-lg navbar-light" style="background-color: #eff5f5;">
+<nav class="navbar sticky-top navbar-expand-md navbar-dark bg-dark">
   <a class="navbar-brand" routerLink="">
     <img src="assets/img/WFLogo.svg" height="45" alt="Wladimir Fraga">
   </a>
-  <ul class="nav">
-    <li class="nav-item">
-      <a class="nav-link " routerLink="" routerLinkActive="active">Home</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" routerLink="data" routerLinkActive="active" *ngIf="auth.isLoggedIn">Data</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" routerLink="login" routerLinkActive="active" *ngIf="!auth.isLoggedIn">Login</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" (click)="logout()" routerLink="" *ngIf="auth.isLoggedIn">Logout</a>
-    </li>
-  </ul>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="mainNavbar">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link " routerLink="" routerLinkActive="active">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="data" routerLinkActive="active" *ngIf="auth.isLoggedIn">Data</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="login" routerLinkActive="active" *ngIf="!auth.isLoggedIn">Login</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" (click)="logout()" routerLink="" *ngIf="auth.isLoggedIn">Logout</a>
+      </li>
+    </ul>
+  </div>
 </nav>
 <router-outlet></router-outlet>
 
