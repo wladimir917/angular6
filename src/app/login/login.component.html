@@ -1,18 +1,24 @@
-<div class="form-signin">
-  <div class="alert alert-warning alert-dismissible fade show" role="alert" *ngIf="error">
-    <strong>Error: </strong>{{error}}!
+<!-- <div class="container h-100"> -->
+<div class="container text-center" *ngIf="loading">
+  <img src="assets/img/spin.gif" /> <!-- Or use a CSS one if you like -->
+</div>
+<div class="container" *ngIf="!loading">
+  <div class="form-signin">
+    <div class="alert alert-warning alert-dismissible fade show" role="alert" *ngIf="error">
+      <strong>Error: </strong>{{error}}!
+    </div>
+    <form class="" (ngSubmit)="submit()">
+      <div class="form-group">
+        <label for="username">Username</label>
+        <input type="text" name="username" class="form-control" [(ngModel)]="username" />
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" name="password" class="form-control" [(ngModel)]="password" />
+      </div>
+      <div class="form-group">
+        <button class="btn btn-primary" type="submit">Login</button>
+      </div>
+    </form>
   </div>
-  <form class="" (ngSubmit)="submit()">
-    <div class="form-group">
-      <label for="username">Username</label>
-      <input type="text" name="username" class="form-control" [(ngModel)]="username" />
-    </div>
-    <div class="form-group">
-      <label for="password">Password</label>
-      <input type="password" name="password" class="form-control" [(ngModel)]="password" />
-    </div>
-    <div class="form-group">
-      <button class="btn btn-primary" type="submit">Login</button>
-    </div>
-  </form>
 </div>
